@@ -6,7 +6,7 @@ import { MainHeader } from '@/components/layout/MainHeader';
 import { DefaultSidebar } from '@/components/layout/DefaultSidebar';
 import { ItineraryPlannerPanel } from '@/components/panels/ItineraryPlannerPanel';
 import { KnowledgeBasePanel } from '@/components/panels/KnowledgeBasePanel';
-import { VideoPlayerSidebar } from '@/components/panels/VideoPlayerSidebar';
+import { VideoPlayerSidebar } from '@/components/panels/VideoPlayerSideBar';
 import { Home } from 'lucide-react';
 
 export const PanelHeader = ({ title }: { title: string }) => (
