@@ -8,7 +8,8 @@ import { TripDetailPage } from '@/pages/TripDetailPage';
 import { KnowledgeBasePage } from '@/pages/KnowledgeBasePage';
 import { HomePage } from '@/pages/HomePage';
 import { FlowPlayerPage } from '@/pages/FlowPlayerPage';
-import { FlowSummaryPage } from '@/pages/FlowSummaryPage'; // 1. 导入新的着陆页
+import { FlowSummaryPage } from '@/pages/FlowSummaryPage';
+import { PersonalHubPage } from '@/pages/PersonalHubPage';
 
 const router = createBrowserRouter([
     {
@@ -20,13 +21,16 @@ const router = createBrowserRouter([
             { path: 'trip-planner', element: <TripPlannerPage /> },
             { path: 'trip-planner/:tripId', element: <TripDetailPage /> },
             { path: 'me/knowledge-base', element: <KnowledgeBasePage /> },
+
+            // Phase 1: 个人中心路由
+            { path: 'hub', element: <PersonalHubPage /> },
+            { path: 'me/hub', element: <PersonalHubPage /> }, // 别名路由
         ],
     },
     {
         path: '/flow',
         element: <FlowPlayerPage />,
     },
-    // 2. 为着陆页添加独立的顶级路由
     {
         path: '/flow/summary',
         element: <FlowSummaryPage />,

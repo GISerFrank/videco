@@ -2,7 +2,17 @@
 import { create } from 'zustand';
 import React from 'react';
 
-export type AppMode = 'video-consumption' | 'itinerary-planning' | 'knowledge-management' | 'default';
+export type AppMode =
+  | 'personal-hub'      // 个人中心模式
+  | 'video-space'       // 视频空间模式
+  | 'video-consumption' // 视频消费模式（保留兼容）
+  | 'knowledge-garden'  // 知识花园模式
+  | 'knowledge-management' // 知识管理模式（保留兼容）
+  | 'life-lab'          // 生活实验室模式
+  | 'itinerary-planning' // 行程规划模式（保留兼容）
+  | 'community'         // 社区模式
+  | 'creator-studio'    // 创作工坊模式
+  | 'default';          // 默认模式
 
 interface AppState {
     appMode: AppMode;
